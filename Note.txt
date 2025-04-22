@@ -1,0 +1,8 @@
+aggregation in mongodb
+import { v4 as uuid } from 'uuid';
+
+export const generateUniqueId = (prefix: string = ''): string => {
+    const timestamp = Date.now();
+    const uniqueId = uuid();
+    return `${prefix}${timestamp}_${uniqueId}`;
+}; 
